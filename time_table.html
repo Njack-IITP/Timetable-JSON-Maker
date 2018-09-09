@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TimeTable Generator</title>
+    <link rel="stylesheet" href="external/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="timeTable.css">
+    <script src="external/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="external/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="external/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>TimeTable Generator</h1>
+        <hr>
+        <br>
+        <div class="dropdown drop">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Select Course
+            </button>
+            <div class="dropdown-menu"  id="menu1">
+              <button class="dropdown-item" value="1">BTech</button>
+              <button class="dropdown-item" value="2">MTech</button>
+              <button class="dropdown-item" value="3">MS</button>
+              <button class="dropdown-item" value="4">PHD</button>
+            </div>
+        </div>
+
+        <div class="dropdown drop">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Select Year
+                </button>
+                <div class="dropdown-menu"  id="menu2">
+                </div>
+        </div>
+
+        <div class="dropdown drop">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Select Branch
+                </button>
+                <div class="dropdown-menu"  id="menu3">
+                </div>
+        </div>
+
+        <table class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>8:00</th>
+                    <th>9:00</th>
+                    <th>10:00</th>
+                    <th>11:00</th>
+                    <th>12:00</th>
+                    <th>1:00</th>
+                    <th>2:00</th>
+                    <th>3:00</th>
+                    <th>4:00</th>
+                    <th>5:00</th>
+                    <th>6:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Monday</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </table>
+
+    </div>
+    <script src="timeTable.js"></script>
+</body>
+</html>
