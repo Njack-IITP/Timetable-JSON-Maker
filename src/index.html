@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Time table generator</title>
+  </head>
+  <body>
+    <div class="container" id="Selector">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span id="course">Course</span>
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a onclick=handleCourse("Btech")>B.Tech</a></li>
+          <li><a onclick=handleCourse("Mtech")>M.Tech</a></li>
+          <li><a onclick=handleCourse("PHD")>PHD</a></li>
+        </ul>
+    </div>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span id="year">Year</span>
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a onclick=handleYear("First")>First</a></li>
+          <li><a onclick=handleYear("Second")>Second</a></li>
+          <li><a onclick=handleYear("Third")>Third</a></li>
+          <li><a onclick=handleYear("Forth")>Forth</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span id="branch">Branch</span>
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a onclick=handleBranch("CS")>CS</a></li>
+          <li><a onclick=handleBranch("EE")>EE</a></li>
+          <li><a onclick=handleBranch("ME")>ME</a></li>
+          <li><a onclick=handleBranch("CH")>CH</a></li>
+          <li><a onclick=handleBranch("CE")>CE</a></li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-primary" onclick=loadTT()>Submit</button>
+    </div>
+    <div class="container" id="Table">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>8 AM</th>
+            <th>9 AM</th>
+            <th>10 AM</th>
+            <th>11 AM</th>
+            <th>12 AM</th>
+            <th>1 PM</th>
+            <th>2 PM</th>
+            <th>3 PM</th>
+            <th>4 PM</th>
+            <th>5 PM</th>
+          </tr>
+        </thead>
+        <tbody id="timetable">
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDTWaBiVYkYy56Okb-CpRb1sHtY2g3wZxo",
+        authDomain: "timetable-generator-40b48.firebaseapp.com",
+        databaseURL: "https://timetable-generator-40b48.firebaseio.com",
+        projectId: "timetable-generator-40b48",
+        storageBucket: "timetable-generator-40b48.appspot.com",
+        messagingSenderId: "915375757584"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
